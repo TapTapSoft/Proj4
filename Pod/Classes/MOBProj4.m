@@ -43,7 +43,7 @@
         
         [_context evaluateScript:@"var window = {};"]; // make window an empty object
         
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"proj4_v2" ofType:@"js"];
+        NSString *path = [[NSBundle bundleForClass:[self class]] pathForResource:@"proj4_v2" ofType:@"js"];
         
         NSString *string = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:&err];
         if (err) {
